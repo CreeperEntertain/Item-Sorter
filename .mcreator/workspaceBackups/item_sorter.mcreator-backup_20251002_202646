@@ -1,0 +1,564 @@
+{
+  "mod_elements": [
+    {
+      "name": "Sorter",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/block/entity/SorterBlockEntity.java",
+          "src/main/java/net/centertain/itemsorter/block/SorterBlock.java",
+          "src/main/resources/assets/item_sorter/blockstates/sorter.json",
+          "src/main/resources/assets/item_sorter/models/block/sorter.json",
+          "src/main/resources/assets/item_sorter/models/item/sorter.json",
+          "src/main/resources/data/item_sorter/loot_tables/blocks/sorter.json"
+        ]
+      }
+    },
+    {
+      "name": "SorterStates",
+      "type": "blockstates",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_states",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/item_sorter/models/block/sorter_states_blockstate_0.json"
+        ]
+      }
+    },
+    {
+      "name": "CSorter",
+      "type": "recipe",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_sorter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/item_sorter/recipes/c_sorter.json"
+        ]
+      }
+    },
+    {
+      "name": "Filter",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/item/FilterItem.java",
+          "src/main/resources/assets/item_sorter/models/item/filter.json",
+          "src/main/java/net/centertain/itemsorter/item/inventory/FilterInventoryCapability.java"
+        ]
+      }
+    },
+    {
+      "name": "CFilter",
+      "type": "recipe",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_filter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/item_sorter/recipes/c_filter.json"
+        ]
+      }
+    },
+    {
+      "name": "FilterModeReturn",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_mode_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterModeReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SorterInterface",
+      "type": "gui",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_interface",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/world/inventory/SorterInterfaceMenu.java",
+          "src/main/java/net/centertain/itemsorter/network/SorterInterfaceButtonMessage.java",
+          "src/main/java/net/centertain/itemsorter/client/gui/SorterInterfaceScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "FilterInterface",
+      "type": "gui",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_interface",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/client/gui/FilterInterfaceScreen.java",
+          "src/main/java/net/centertain/itemsorter/world/inventory/FilterInterfaceMenu.java",
+          "src/main/java/net/centertain/itemsorter/network/FilterInterfaceButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "FilterItemModeReturn",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_mode_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemModeReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemTypeReturn",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_type_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemTypeReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemReturn",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_return",
+      "metadata": {
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemModeAdjust",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_mode_adjust",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemModeAdjustProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemInitialization",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_initialization",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemInitializationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemTypeAdjust",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_type_adjust",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemTypeAdjustProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SorterStateUpdater",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_state_updater",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/SorterStateUpdaterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemSpecialInformation",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemStringAdjust",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_string_adjust",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemStringAdjustProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SorterModeSwitcher",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_mode_switcher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/SorterModeSwitcherProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SorterTickUpdate",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/SorterTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SorterItemSucking",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_item_sucking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/SorterItemSuckingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemStringReturn",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_string_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemStringReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FilterItemTagWarningReturn",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "filter_item_tag_warning_return",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/FilterItemTagWarningReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SorterItemTransporting",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sorter_item_transporting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/procedures/SorterItemTransportingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ImprovedSorter",
+      "type": "block",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "improved_sorter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/block/entity/ImprovedSorterBlockEntity.java",
+          "src/main/resources/assets/item_sorter/models/block/improved_sorter.json",
+          "src/main/resources/data/item_sorter/loot_tables/blocks/improved_sorter.json",
+          "src/main/java/net/centertain/itemsorter/block/ImprovedSorterBlock.java",
+          "src/main/resources/assets/item_sorter/blockstates/improved_sorter.json",
+          "src/main/resources/assets/item_sorter/models/item/improved_sorter.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:ImprovedSorter",
+      "~CUSTOM:Sorter"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "gui.item_sorter.filter_interface.RegistryKey": "Registry Key",
+      "gui.item_sorter.filter_interface.ItemName": "Item Name",
+      "gui.item_sorter.filter_interface.Contains": "Contains",
+      "gui.item_sorter.filter_interface.ItemTag": "Item Tag",
+      "gui.item_sorter.filter_interface.button_type": "Type",
+      "gui.item_sorter.sorter_interface.label_item": "Item",
+      "gui.item_sorter.filter_interface.ModID": "Mod ID",
+      "gui.item_sorter.sorter_interface.label_throughput": "Throughput",
+      "gui.item_sorter.sorter_interface.label_g": "Sorter",
+      "gui.item_sorter.filter_interface.String": "",
+      "gui.item_sorter.filter_interface.button_mode": "Mode",
+      "gui.item_sorter.sorter_interface.label_filtered_item": "Reference",
+      "gui.item_sorter.filter_interface.ModName": "Mod Name",
+      "gui.item_sorter.filter_interface.Equals": "Equals",
+      "gui.item_sorter.sorter_interface.label_inventory": "Inventory",
+      "block.item_sorter.sorter": "Sorter",
+      "gui.item_sorter.sorter_interface.label_filters": "Filters",
+      "item.item_sorter.filter": "Filter",
+      "gui.item_sorter.filter_interface.button_set": "Set",
+      "block.item_sorter.improved_sorter": "Improved Sorter",
+      "gui.item_sorter.sorter_interface.button_mode": "Mode"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "item_sorter",
+    "modName": "Item Sorter",
+    "version": "1.0.0",
+    "author": "TimGe, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.centertain.itemsorter"
+  },
+  "mcreatorVersion": 202400118518
+}

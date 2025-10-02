@@ -1,0 +1,9 @@
+{
+  "parent": "item_sorter:custom/sorter",
+  "textures": {
+    "all": "item_sorter:block/sorter",
+    "particle": "item_sorter:block/sorter",
+    "0": "item_sorter:block/sorter"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "item_sorter:block/improved_sorter"
+    }
+  }
+}

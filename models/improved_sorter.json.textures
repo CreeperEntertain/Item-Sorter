@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "improved_sorter"
+      },
+      "name": "default"
+    }
+  }
+}

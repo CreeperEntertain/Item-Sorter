@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT License"
+
+[[mods]]
+modId="item_sorter"
+version="1.0.0"
+displayName="Item Sorter"
+displayURL="https://mcreator.net"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="CEntertain"
+description="A mod that adds two single block item sorters as well as customizable filters."
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.item_sorter]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+

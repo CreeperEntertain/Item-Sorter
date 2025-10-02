@@ -1,0 +1,142 @@
+{
+  "_fv": 60,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 210,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_mode",
+          "text": "Mode",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "FilterItemModeAdjust"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 154,
+          "y": 92
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_type",
+          "text": "Type",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "FilterItemTypeAdjust"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 154,
+          "y": 72
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "String",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_filter_item_type_return",
+          "text": {
+            "fixedValue": "",
+            "name": "FilterItemTypeReturn"
+          },
+          "color": {
+            "value": -3881778,
+            "falpha": 0.0
+          },
+          "x": 203,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_filter_item_mode_return",
+          "text": {
+            "fixedValue": "",
+            "name": "FilterItemModeReturn"
+          },
+          "color": {
+            "value": -3881778,
+            "falpha": 0.0
+          },
+          "x": 203,
+          "y": 97
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_set",
+          "text": "Set",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "FilterItemStringAdjust"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 234,
+          "y": 163
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_filter_item_string_return",
+          "text": {
+            "fixedValue": "",
+            "name": "FilterItemStringReturn"
+          },
+          "color": {
+            "value": -3881778,
+            "falpha": 0.0
+          },
+          "x": 154,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_filter_item_tag_warning_ret",
+          "text": {
+            "fixedValue": "",
+            "name": "FilterItemTagWarningReturn"
+          },
+          "color": {
+            "value": -3885775,
+            "falpha": 0.0
+          },
+          "x": 155,
+          "y": 60
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 14,
+      "oy": 14,
+      "snapOnGrid": false
+    }
+  }
+}

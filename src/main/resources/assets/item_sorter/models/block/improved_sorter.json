@@ -1,0 +1,9 @@
+{
+  "parent": "item_sorter:custom/improved_sorter",
+  "textures": {
+    "all": "item_sorter:block/improved_sorter",
+    "particle": "item_sorter:block/improved_sorter",
+    "0": "item_sorter:block/improved_sorter"
+  },
+  "render_type": "solid"
+}

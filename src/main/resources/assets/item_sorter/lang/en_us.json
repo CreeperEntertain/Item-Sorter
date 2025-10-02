@@ -1,0 +1,23 @@
+{
+  "gui.item_sorter.filter_interface.RegistryKey": "Registry Key",
+  "gui.item_sorter.filter_interface.ItemName": "Item Name",
+  "gui.item_sorter.filter_interface.Contains": "Contains",
+  "gui.item_sorter.filter_interface.ItemTag": "Item Tag",
+  "gui.item_sorter.filter_interface.button_type": "Type",
+  "gui.item_sorter.sorter_interface.label_item": "Item",
+  "gui.item_sorter.filter_interface.ModID": "Mod ID",
+  "gui.item_sorter.sorter_interface.label_throughput": "Throughput",
+  "gui.item_sorter.sorter_interface.label_g": "Sorter",
+  "gui.item_sorter.filter_interface.String": "",
+  "gui.item_sorter.filter_interface.button_mode": "Mode",
+  "gui.item_sorter.sorter_interface.label_filtered_item": "Reference",
+  "gui.item_sorter.filter_interface.ModName": "Mod Name",
+  "gui.item_sorter.filter_interface.Equals": "Equals",
+  "gui.item_sorter.sorter_interface.label_inventory": "Inventory",
+  "block.item_sorter.sorter": "Sorter",
+  "gui.item_sorter.sorter_interface.label_filters": "Filters",
+  "item.item_sorter.filter": "Filter",
+  "gui.item_sorter.filter_interface.button_set": "Set",
+  "block.item_sorter.improved_sorter": "Improved Sorter",
+  "gui.item_sorter.sorter_interface.button_mode": "Mode"
+}
