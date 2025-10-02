@@ -510,6 +510,19 @@
           "src/main/resources/assets/item_sorter/models/item/improved_sorter.json"
         ]
       }
+    },
+    {
+      "name": "CImprovedSorter",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_improved_sorter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/item_sorter/recipes/c_improved_sorter.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -553,9 +566,9 @@
     "modid": "item_sorter",
     "modName": "Item Sorter",
     "version": "1.0.0",
-    "author": "TimGe, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "description": "A mod that adds two single block item sorters as well as customizable filters.",
+    "author": "CEntertain",
+    "license": "MIT License",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],

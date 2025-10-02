@@ -3,7 +3,7 @@
     {
       "name": "Sorter",
       "type": "block",
-      "sortid": 2,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorter",
@@ -21,7 +21,7 @@
     {
       "name": "SorterStates",
       "type": "blockstates",
-      "sortid": 1,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorter_states",
@@ -34,7 +34,7 @@
     {
       "name": "CSorter",
       "type": "recipe",
-      "sortid": 3,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "c_sorter",
@@ -47,7 +47,7 @@
     {
       "name": "Filter",
       "type": "item",
-      "sortid": 4,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter",
@@ -62,7 +62,7 @@
     {
       "name": "CFilter",
       "type": "recipe",
-      "sortid": 5,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "c_filter",
@@ -75,7 +75,7 @@
     {
       "name": "FilterModeReturn",
       "type": "procedure",
-      "sortid": 6,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_mode_return",
@@ -107,7 +107,7 @@
     {
       "name": "SorterInterface",
       "type": "gui",
-      "sortid": 7,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorter_interface",
@@ -122,7 +122,7 @@
     {
       "name": "FilterInterface",
       "type": "gui",
-      "sortid": 8,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_interface",
@@ -137,7 +137,7 @@
     {
       "name": "FilterItemModeReturn",
       "type": "procedure",
-      "sortid": 9,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_mode_return",
@@ -157,7 +157,7 @@
     {
       "name": "FilterItemTypeReturn",
       "type": "procedure",
-      "sortid": 10,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_type_return",
@@ -177,7 +177,7 @@
     {
       "name": "FilterItemReturn",
       "type": "procedure",
-      "sortid": 11,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_return",
@@ -197,7 +197,7 @@
     {
       "name": "FilterItemModeAdjust",
       "type": "procedure",
-      "sortid": 12,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_mode_adjust",
@@ -216,7 +216,7 @@
     {
       "name": "FilterItemInitialization",
       "type": "procedure",
-      "sortid": 13,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_initialization",
@@ -235,7 +235,7 @@
     {
       "name": "FilterItemTypeAdjust",
       "type": "procedure",
-      "sortid": 14,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_type_adjust",
@@ -254,7 +254,7 @@
     {
       "name": "SorterStateUpdater",
       "type": "procedure",
-      "sortid": 15,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorter_state_updater",
@@ -285,7 +285,7 @@
     {
       "name": "FilterItemSpecialInformation",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_special_information",
@@ -305,7 +305,7 @@
     {
       "name": "FilterItemStringAdjust",
       "type": "procedure",
-      "sortid": 17,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "filter_item_string_adjust",
@@ -328,7 +328,7 @@
     {
       "name": "SorterModeSwitcher",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorter_mode_switcher",
@@ -368,6 +368,10 @@
           "src/main/java/net/centertain/itemsorter/procedures/SorterTickUpdateProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
           {
             "name": "x",
             "type": "number"
@@ -488,12 +492,44 @@
           }
         ]
       }
+    },
+    {
+      "name": "ImprovedSorter",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "improved_sorter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/centertain/itemsorter/block/entity/ImprovedSorterBlockEntity.java",
+          "src/main/resources/assets/item_sorter/models/block/improved_sorter.json",
+          "src/main/resources/data/item_sorter/loot_tables/blocks/improved_sorter.json",
+          "src/main/java/net/centertain/itemsorter/block/ImprovedSorterBlock.java",
+          "src/main/resources/assets/item_sorter/blockstates/improved_sorter.json",
+          "src/main/resources/assets/item_sorter/models/item/improved_sorter.json"
+        ]
+      }
+    },
+    {
+      "name": "CImprovedSorter",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_improved_sorter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/item_sorter/recipes/c_improved_sorter.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:ImprovedSorter",
       "~CUSTOM:Sorter"
     ]
   },
@@ -518,6 +554,7 @@
       "gui.item_sorter.sorter_interface.label_filters": "Filters",
       "item.item_sorter.filter": "Filter",
       "gui.item_sorter.filter_interface.button_set": "Set",
+      "block.item_sorter.improved_sorter": "Improved Sorter",
       "gui.item_sorter.sorter_interface.button_mode": "Mode"
     }
   },
@@ -529,9 +566,9 @@
     "modid": "item_sorter",
     "modName": "Item Sorter",
     "version": "1.0.0",
-    "author": "TimGe, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "description": "A mod that adds two single block item sorters as well as customizable filters.",
+    "author": "CEntertain",
+    "license": "MIT License",
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],

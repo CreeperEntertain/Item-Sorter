@@ -30,11 +30,6 @@ public class SorterItemSuckingProcedure {
 		ItemStack throughputItem = ItemStack.EMPTY;
 		ItemStack referenceItem = ItemStack.EMPTY;
 		ItemStack filterItem = ItemStack.EMPTY;
-		String filterType = "";
-		String filterString = "";
-		String filterItemRegistryName = "";
-		String filterItemRegistryKey = "";
-		String filterItemModID = "";
 		boolean succeed = false;
 		boolean referenceCheck = false;
 		boolean sortingMode = false;
@@ -46,6 +41,12 @@ public class SorterItemSuckingProcedure {
 		boolean tempCheck = false;
 		boolean filterMode = false;
 		boolean containsFilter = false;
+		String filterType = "";
+		String filterString = "";
+		String filterItemRegistryName = "";
+		String filterItemRegistryKey = "";
+		String filterItemModID = "";
+		String hopperItemDisplayName = "";
 		hopperSlot = 0;
 		succeed = false;
 		referenceCheck = false;
@@ -148,6 +149,7 @@ public class SorterItemSuckingProcedure {
 				filterType = filterItem.getOrCreateTag().getString("FilterType");
 				filterMode = (filterItem.getOrCreateTag().getString("FilterMode")).equals("[Equals]");
 				filterString = (filterItem.getOrCreateTag().getString("FilterString")).replace("&quot;", "\"");
+				hopperItemDisplayName = (hopperItem.getDisplayName().getString()).substring(1, (int) ((hopperItem.getDisplayName().getString()).length() - 1));
 				filterItemRegistryName = ForgeRegistries.ITEMS.getKey(hopperItem.getItem()).toString();
 				filterItemRegistryKey = filterItemRegistryName.contains(":") ? filterItemRegistryName.split(":", 2)[1] : filterItemRegistryName;
 				filterItemModID = filterItemRegistryName.contains(":") ? filterItemRegistryName.split(":", 2)[0] : filterItemRegistryName;
@@ -156,12 +158,12 @@ public class SorterItemSuckingProcedure {
 				} else {
 					if ((filterType).equals("[Item Name]")) {
 						if (filterMode) {
-							if ((hopperItem.getDisplayName().getString()).equals(filterString)) {
+							if ((hopperItemDisplayName).equals(filterString)) {
 								tempCheck = true;
 							}
 						} else {
-							if ((hopperItem.getDisplayName().getString()).contains(filterString)) {
-								filterMode = true;
+							if (hopperItemDisplayName.contains(filterString)) {
+								tempCheck = true;
 							}
 						}
 					} else if ((filterType).equals("[Registry Key]")) {
